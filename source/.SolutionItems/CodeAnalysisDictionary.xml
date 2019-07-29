@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <!-- 
+    Allgemeine Erlaeuterungen 
+    https://docs.microsoft.com/en-us/visualstudio/code-quality/how-to-customize-the-code-analysis-dictionary
+    
+    Von Microsoft vordefinierte Begriffe/Schreibweisen koennen nicht ueberschrieben werden, siehe
+    https://connect.microsoft.com/VisualStudio/feedback/details/640787/custom-dictionary-does-not-behave-as-expected
+    Code Analysis ships with a pre-defined custom dictionary that always 
+    overrides any other custom dictionaries when there is a conflict.
+    z.B. ToolBar, ScrollBar, UI, ... vollstaendige Liste siehe
+    "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\FxCop\CustomDictionary.xml"
+  -->
+  <Words>
+    <Unrecognized>
+      <!--
+        Um einen Begriff aus der Liste der Begriffe auszuschließen, die die Codeanalyse als korrekt geschrieben identifiziert,
+        fügen Sie den auszuschließenden Begriff als inneren Text in einem Dictionary/Words/Unrecognized/Word-Element hinzu.
+        Bei Begriffen in Dictionary/Words/Unrecognized/Word-Elementen wird die Groß-/Kleinschreibung nicht beachtet.
+
+        Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+        CA1701: Bei zusammengesetzten Begriffen in Ressourcenzeichenfolgen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1702: Bei zusammengesetzten Begriffen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1703: Ressourcenzeichenfolgen sollten korrekt geschrieben werden
+        CA1704: Bezeichner sollten korrekt geschrieben werden
+        CA1709: Bei Bezeichnern sollte die Groß-/Kleinschreibung beachtet werden
+        CA1726: Bevorzugte Begriffe verwenden
+        CA2204: Literale sollten eine korrekte Rechtschreibung aufweisen
+      -->
+      <Word></Word>
+    </Unrecognized>
+    <Recognized>
+      <!--
+        Um einen Begriff in die Liste der Begriffe aufzunehmen, die die Codeanalyse als korrekt geschrieben identifiziert,
+        fügen Sie den Begriff als inneren Text in einem Dictionary/Words/Recognized/Word-Element hinzu.
+        Bei Begriffen in Dictionary/Words/Recognized/Word-Elementen wird die Groß-/Kleinschreibung nicht beachtet.
+
+        Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+        CA1701: Bei zusammengesetzten Begriffen in Ressourcenzeichenfolgen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1702: Bei zusammengesetzten Begriffen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1703: Ressourcenzeichenfolgen sollten korrekt geschrieben werden
+        CA1704: Bezeichner sollten korrekt geschrieben werden
+        CA1709: Bei Bezeichnern sollte die Groß-/Kleinschreibung beachtet werden
+        CA1726: Bevorzugte Begriffe verwenden
+        CA2204: Literale sollten eine korrekte Rechtschreibung aufweisen
+      -->
+      <Word>NuGet</Word>
+      <Word>Micrometre</Word>
+      <Word>Millimetre</Word>
+      <Word>Std</Word>
+      <Word>Ugg</Word>
+      <Word>Wix</Word>
+    </Recognized>
+    <Deprecated>
+      <!--
+        Um einen Begriff in die Liste der Begriffe aufzunehmen, die die Codeanalyse als veraltet identifiziert,
+        fügen Sie den Begriff als inneren Text in einem Dictionary/Words/Deprecated/Term-Element hinzu.
+        Ein veralteter Begriff ist ein Wort, das ordnungsgemäß geschrieben ist, aber nicht mehr verwendet werden sollte.
+        Bei veralteten Begriffen in Dictionary/Words/Deprecated/Term-Elementen wird die Groß-/Kleinschreibung nicht beachtet.
+
+        Um einen Alternativvorschlag für den Begriff in der Warnung anzugeben, geben Sie die Alternative im
+        PreferredAlternate-Attribut des Term-Elements an. Sie können den Attributwert leer lassen, wenn Sie keine
+        Alternative vorschlagen möchten.
+        Beim PreferredAlternate-Attributwert wird die Groß-/Kleinschreibung beachtet.
+        Verwenden Sie Pascal-Schreibweise für zusammengesetzte Alternativen.
+
+        Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+        CA1701: Bei zusammengesetzten Begriffen in Ressourcenzeichenfolgen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1702: Bei zusammengesetzten Begriffen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1703: Ressourcenzeichenfolgen sollten korrekt geschrieben werden
+        CA1704: Bezeichner sollten korrekt geschrieben werden
+        CA1726: Bevorzugte Begriffe verwenden
+      -->
+      <Term PreferredAlternate=""></Term>
+    </Deprecated>
+    <Compound>
+      <!--
+        Das integrierte Wörterbuch identifiziert einige bestimmte Begriffe als einen Begriff anstatt als
+        zusammengesetzten Begriff. Um einen Begriff in die Liste der Begriffe aufzunehmen, die die Codeanalyse
+        als zusammengesetzten Begriff identifiziert, und um die korrekte Groß-/Kleinschreibung des Begriffs
+        festzulegen, fügen Sie den Begriff als inneren Text in einem Dictionary/Words/Compound/Term-Element hinzu.
+        Geben Sie im CompoundAlternate-Attribut des Term-Elements die einzelnen Wörter an, die den
+        zusammengesetzten Begriff bilden, indem Sie den ersten Buchstaben jedes Worts groß schreiben
+        (Pascal-Schreibweise). Beachten Sie, dass der im inneren Text angegebene Begriff automatisch der
+        Dictionary/Words/DiscreteExceptions-Liste hinzugefügt wird.
+
+        Bei veralteten Begriffen in Dictionary/Words/Deprecated/Term-Elementen wird die Groß-/Kleinschreibung nicht beachtet.
+
+        Beim PreferredAlternate-Attributwert wird die Groß-/Kleinschreibung beachtet.
+        Verwenden Sie Pascal-Schreibweise für zusammengesetzte Alternativen.
+
+        Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+        CA1701: Bei zusammengesetzten Begriffen in Ressourcenzeichenfolgen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1702: Bei zusammengesetzten Begriffen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1703: Ressourcenzeichenfolgen sollten korrekt geschrieben werden
+        CA1704: Bezeichner sollten korrekt geschrieben werden
+      -->
+      <Term CompoundAlternate="NuGet">Nuget</Term>
+    </Compound>
+    <DiscreteExceptions>
+      <!--
+        Um einen Begriff aus der Liste der Begriffe auszuschließen, die die Codeanalyse bei der Überprüfung von
+        zusammengesetzten Begriffen anhand der Groß-/Kleinschreibung als einzelnes Wort identifiziert,
+        fügen Sie den Begriff als inneren Text eines Dictionary/Words/DiscreteExceptions/Term-Element hinzu.
+        Bei Begriffen in Dictionary/Words/DiscreteExceptions/Term-Elementen wird die Groß-/Kleinschreibung nicht beachtet.
+
+        Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+        CA1701: Bei zusammengesetzten Begriffen in Ressourcenzeichenfolgen sollte die Groß-/Kleinschreibung beachtet werden
+        CA1702: Bei zusammengesetzten Begriffen sollte die Groß-/Kleinschreibung beachtet werden
+      -->
+      <Term></Term>
+    </DiscreteExceptions>
+  </Words>
+  <Acronyms>
+    <!--
+      Um ein Akronym in die Liste der Begriffe aufzunehmen, die die Codeanalyse als korrekt geschrieben identifiziert, und um anzugeben, wie das Akronym bei der Prüfung von zusammengesetzten Wörtern behandelt wird, fügen Sie den Begriff als inneren Text eines Dictionary/Acronyms/CasingExceptions/Acronym-Elements hinzu. Bei Akronymen in Dictionary/Acronyms/CasingExceptions/Acronym-Elementen wird die Groß-/Kleinschreibung beachtet.
+      Akronyme entstehen dadurch, dass Wörter oder Wortgruppen auf ihre Anfangsbestandteile gekürzt werden.
+
+      Begriffe im Knoten werden auf die folgenden Codeanalyseregeln angewendet:
+      CA1709: Bei Bezeichnern sollte die Groß-/Kleinschreibung beachtet werden
+    -->
+    <CasingExceptions>
+      <Acronym></Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

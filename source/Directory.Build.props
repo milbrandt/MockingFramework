@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <PackageVersion Condition=" '$(ProjectVersion_NuGet)' != '' ">$(ProjectVersion_NuGet)</PackageVersion>
+    <Version Condition=" '$(ProjectVersion_NuGet)' != '' ">$(ProjectVersion_NuGet)</Version>
+    <Version Condition=" '$(ProjectVersion_NuGet)' == '' ">0.0.1</Version>
+    <Copyright>Copyright © 2019</Copyright>
+  </PropertyGroup>
+</Project>
